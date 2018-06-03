@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Biblioteca.MatematicaOperacao</id>
+    <version>1.0.0</version>
+    <title>MatematicaOperacao</title>
+    <authors>Marcos Antônio Barbosa de Souza</authors>
+    <owners>Marcos Antônio Barbosa de Souza</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://raw.githubusercontent.com/JamesNK/Newtonsoft.Json/master/LICENSE.md</licenseUrl>
+    <iconUrl>http://www.mystudyhelp.in/images/maths.png</iconUrl>
+    <description>Biblioteca com operações matemáticas.</description>
+    <releaseNotes>Versão inicial</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <language>pt-BR</language>
+    <tags>matematica soma</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="11.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="lib\MatematicaOperacao.dll" target="lib\MatematicaOperacao.dll" />
+  </files>
+</package>
