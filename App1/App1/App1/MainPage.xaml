@@ -6,7 +6,7 @@
              x:Class="App1.MainPage">
     <StackLayout>
         <Label Text="Bemvindo!"/>
-        <Entry Placeholder="Digite o seu nome">
+        <Entry x:Name="txtNome" Placeholder="Digite o seu nome" Text="">
             <Entry.Behaviors>
                 <lib:MaiusculoBehavior/>
             </Entry.Behaviors>
@@ -15,7 +15,20 @@
                     <Setter Property="BackgroundColor" Value="Purple" />
                     <Setter Property="TextColor" Value="Yellow" />
                 </Trigger>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="False">
+                    <Setter Property="BackgroundColor" Value="Green" />
+                    <Setter Property="TextColor" Value="Purple" />
+                </Trigger>
             </Entry.Triggers>
         </Entry>
+        <Button Text="Enviar" TextColor="Black" BackgroundColor="Azure">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding Source={x:Reference txtNome}, Path=Text.Length}" Value="0">
+                    <Setter Property="TextColor" Value="White" />
+                    <Setter Property="BackgroundColor" Value="Gray" />
+                    <Setter Property="IsEnabled" Value="False" />
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
     </StackLayout>
 </ContentPage>
