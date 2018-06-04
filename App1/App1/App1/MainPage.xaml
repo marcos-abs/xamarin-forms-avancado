@@ -21,6 +21,13 @@
                 </Trigger>
             </Entry.Triggers>
         </Entry>
+        <Entry x:Name="txtEmail" Placeholder="Digite o seu email" Text="">
+            <Entry.Triggers>
+                <EventTrigger Event="TextChanged">
+                    <lib:EmailValidoTrigger />
+                </EventTrigger>
+            </Entry.Triggers>
+        </Entry>
         <Button Text="Enviar" TextColor="Black" BackgroundColor="Azure">
             <Button.Triggers>
                 <DataTrigger TargetType="Button" Binding="{Binding Source={x:Reference txtNome}, Path=Text.Length}" Value="0">
