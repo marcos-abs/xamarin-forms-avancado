@@ -9,10 +9,16 @@ namespace App2 {
         DataTemplate ItemPessoaNObrigatoria;
 
         public SeletorTemplate() {
-
+            ItemPessoaObrigatoria = new DataTemplate(typeof(Templates.ItemPessoaObrigatorioViewCell));
+            ItemPessoaNObrigatoria = new DataTemplate(typeof(Templates.ItemPessoaNObrigatorioViewCell));
         }
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container) {
-            throw new NotImplementedException();
+            MainPage.Pessoa pessoa = item as MainPage.Pessoa;
+
+            if(pessoa.IsRequired) {
+                return ItemPessoaObrigatoria;
+            }
+            return ItemPessoaNObrigatoria;
         }
     }
 }

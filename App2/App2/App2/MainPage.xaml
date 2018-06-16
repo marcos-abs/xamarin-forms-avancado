@@ -4,9 +4,14 @@
              xmlns:local="clr-namespace:App2"
              x:Class="App2.MainPage">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:SeletorTemplate x:Key="SelectorPessoa" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <StackLayout>
         <!--  GroupDisplayBinding="{Binding Titulo}" GroupShortNameBinding="{Binding TituloCurto}" -->
-        <ListView x:Name="ListaFuncionarios" IsGroupingEnabled="True">
+        <ListView x:Name="ListaFuncionarios" IsGroupingEnabled="True" ItemTemplate="{StaticResource Key=SelectorPessoa}">
             <ListView.Header>
                 <Label Text="Cabeçalho! " 
                            HorizontalOptions="Center"
@@ -27,11 +32,6 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.GroupHeaderTemplate>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding Nome}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
 
