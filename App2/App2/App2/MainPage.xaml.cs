@@ -16,24 +16,24 @@ namespace App2 {
         private List<Grupo> GetFuncionarios () {
             return new List<Grupo> { 
                 new Grupo("Presidente", "CEO", "Presidente da Empresa") {
-                    new Pessoa { Nome = "José" }
+                    new Pessoa { Nome = "José", IsRequired = true, RankEficiencia = 8 }
                 },
                 new Grupo("Diretores", "Dir.", "Diretor da Empresa") {
-                    new Pessoa { Nome = "João" },
-                    new Pessoa { Nome = "Maria" }
+                    new Pessoa { Nome = "João", IsRequired = false },
+                    new Pessoa { Nome = "Maria", IsRequired = true, RankEficiencia = 8 }
                 },
                 new Grupo("Gerentes", "Ger.", "Gerente da Empresa") {
-                    new Pessoa { Nome = "Felipe" },
-                    new Pessoa { Nome = "Judas" }
+                    new Pessoa { Nome = "Felipe", IsRequired = true, RankEficiencia = 7 },
+                    new Pessoa { Nome = "Judas", IsRequired = false }
                 },
                 new Grupo("Funcionarios", "Func.", "Funcionário da Empresa") {
-                    new Pessoa { Nome = "João" },
-                    new Pessoa { Nome = "Maria" },
-                    new Pessoa { Nome = "João" },
-                    new Pessoa { Nome = "Maria" },
-                    new Pessoa { Nome = "Felipe" },
-                    new Pessoa { Nome = "Judas" },
-                    new Pessoa { Nome = "José" }
+                    new Pessoa { Nome = "João", IsRequired = false },
+                    new Pessoa { Nome = "Maria", IsRequired = false },
+                    new Pessoa { Nome = "João", IsRequired = true, RankEficiencia = 6 },
+                    new Pessoa { Nome = "Maria", IsRequired = false },
+                    new Pessoa { Nome = "Felipe", IsRequired = false },
+                    new Pessoa { Nome = "Judas", IsRequired = false },
+                    new Pessoa { Nome = "José", IsRequired = false }
                 }
             };
         }
@@ -52,6 +52,8 @@ namespace App2 {
 
         public class Pessoa {
             public string Nome { get; set; }
+            public bool IsRequired { get; set; }
+            public int RankEficiencia { get; set; }
         }
     }
 }
