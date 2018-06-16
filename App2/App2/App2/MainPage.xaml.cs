@@ -25,6 +25,15 @@ namespace App2 {
                 new Grupo("Gerentes", "Ger.", "Gerente da Empresa") {
                     new Pessoa { Nome = "Felipe" },
                     new Pessoa { Nome = "Judas" }
+                },
+                new Grupo("Funcionarios", "Func.", "Funcionário da Empresa") {
+                    new Pessoa { Nome = "João" },
+                    new Pessoa { Nome = "Maria" },
+                    new Pessoa { Nome = "João" },
+                    new Pessoa { Nome = "Maria" },
+                    new Pessoa { Nome = "Felipe" },
+                    new Pessoa { Nome = "Judas" },
+                    new Pessoa { Nome = "José" }
                 }
             };
         }

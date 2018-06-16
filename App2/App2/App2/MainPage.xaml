@@ -5,11 +5,18 @@
              x:Class="App2.MainPage">
 
     <StackLayout>
-    	<Label Text="Welcome to Xamarin.Forms!!! " 
-           HorizontalOptions="Center"
-           VerticalOptions="Center" />
         <!--  GroupDisplayBinding="{Binding Titulo}" GroupShortNameBinding="{Binding TituloCurto}" -->
         <ListView x:Name="ListaFuncionarios" IsGroupingEnabled="True">
+            <ListView.Header>
+                <Label Text="Cabeçalho! " 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+            </ListView.Header>
+            <ListView.Footer>
+                <Label Text="Rodapé! " 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+            </ListView.Footer>
             <ListView.GroupHeaderTemplate>
                 <DataTemplate>
                     <ViewCell>
