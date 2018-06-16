@@ -5,11 +5,11 @@
              x:Class="App2.MainPage">
 
     <StackLayout>
-    	<Label Text="Welcome to Xamarin.Forms !" 
+    	<Label Text="Welcome to Xamarin.Forms!!! " 
            HorizontalOptions="Center"
            VerticalOptions="Center" />
 
-        <ListView x:Name="ListaFuncionarios">
+        <ListView x:Name="ListaFuncionarios" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Titulo}" GroupShortNameBinding="{Binding TituloCurto}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Nome}" />
