@@ -19,12 +19,10 @@ namespace App3 {
     public partial class MainPage : ContentPage {
         public MainPage() {
             InitializeComponent();
-
 #if __ANDROID__
             TextView labelDroid = new TextView(Forms.Context) { Text = "Eu sou Android Nativo !" };
             Container.Children.Add(labelDroid);
 #endif
-
 #if __IOS__
             UILabel labelIOS = new UILabel() { Text = "Eu sou iOS Nativo!" };
             Container.Children.Add(labelIOS);
