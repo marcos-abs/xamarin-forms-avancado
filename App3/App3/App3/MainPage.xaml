@@ -8,6 +8,8 @@
     	<Label Text="Eu sou Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+
+        <AbsoluteLayout x:Name="ContainerAbs"></AbsoluteLayout>
     </StackLayout>
 
 </ContentPage>

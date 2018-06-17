@@ -8,6 +8,7 @@ using Xamarin.Forms;
 #if __ANDROID__
 using Android.Widget;
 using Xamarin.Forms.Platform.Android;
+using Android.Support.Design.Widget;
 #endif
 
 #if __IOS__
@@ -22,6 +23,13 @@ namespace App3 {
 #if __ANDROID__
             TextView labelDroid = new TextView(Forms.Context) { Text = "Eu sou Android Nativo !" };
             Container.Children.Add(labelDroid);
+            FloatingActionButton fab = new FloatingActionButton(Forms.Context);
+            fab.SetImageResource(Droid.Resource.Drawable.ic_media_play_dark);
+            ContainerAbs.Children.Add(fab);
+
+            fab.Click += delegate {
+                DisplayAlert("FAB", "FAB Clicado", "OK");
+            };
 #endif
 #if __IOS__
             UILabel labelIOS = new UILabel() { Text = "Eu sou iOS Nativo!" };
